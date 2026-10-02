@@ -6,8 +6,6 @@ Homebrew casks for [Vibeshed](https://github.com/idmitriev/vibeshed).
 brew install --cask idmitriev/tap/vibeshed
 ```
 
-The build is ad-hoc signed and not notarized, so clear the quarantine flag before first launch:
+Releases are signed with a Developer ID and notarized by Apple, so Vibeshed opens without Gatekeeper warnings.
 
-```
-xattr -dr com.apple.quarantine /Applications/Vibeshed.app
-```
+Upgrading from 0.6.0 or earlier (ad-hoc signed builds): macOS sees the new signature as a different app, so re-grant Accessibility, Input Monitoring, and other permissions once. Remove the old Vibeshed entries in System Settings → Privacy & Security, then re-add them.
